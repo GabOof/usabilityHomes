@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usability Homes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Usability Homes</h1>
+      <div class="info-bar">
+        <div class="score">Pontuação: <span id="score">0</span></div>
+        <div class="timer">Tempo: <span id="time">60</span>s</div>
+      </div>
+
+      <div class="buildings-container" id="buildings">
+        <!-- As empresas serão inseridas aqui via JavaScript -->
+      </div>
+
+      <div class="problem-modal" id="problemModal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">&times;</span>
+          <h2 id="problemTitle">Problema de Usabilidade</h2>
+          <div class="problem-image-container">
+            <img id="problemImage" src="" alt="Problema de usabilidade" />
+          </div>
+          <div class="question-container">
+            <p>Qual heurística de Nielsen está sendo violada?</p>
+            <div class="options" id="options">
+              <!-- As opções serão inseridas aqui via JavaScript -->
+            </div>
+          </div>
+          <div class="feedback" id="feedback"></div>
+          <div class="time-left">
+            Tempo restante: <span id="questionTime">15</span>s
+          </div>
+        </div>
+      </div>
+
+      <div class="game-over-modal" id="gameOverModal">
+        <div class="modal-content">
+          <h2>Fim do Jogo!</h2>
+          <p>Sua pontuação final: <span id="finalScore">0</span></p>
+          <button id="restartBtn">Jogar Novamente</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

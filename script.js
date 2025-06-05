@@ -1,6 +1,12 @@
 // Importar dados dos problemas
 import { companies, heuristics } from "./data/problems.js";
 
+console.log("Script carregado");
+console.log("Número de empresas:", companies.length);
+companies.forEach((company) => {
+  console.log(`Empresa: ${company.name}, Imagem: ${company.image}`);
+});
+
 // Variáveis do jogo
 let score = 0;
 let timeLeft = 60;
@@ -24,6 +30,11 @@ const questionTimeElement = document.getElementById("questionTime");
 const gameOverModal = document.getElementById("gameOverModal");
 const finalScoreElement = document.getElementById("finalScore");
 const restartBtn = document.getElementById("restartBtn");
+
+// Adicione esta função antes de initGame()
+function updateTimer() {
+  timeElement.textContent = timeLeft;
+}
 
 // Inicializar o jogo
 function initGame() {

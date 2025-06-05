@@ -84,11 +84,11 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 - Sugerir melhorias
 - Adicionar novos problemas e empresas
 
-## Autores
+## 👥 Autores
 
 Gabrielle de Oliveira Fonseca - 0072379
 
-Mariana Moreira -
+Mariana Moreira - 0076895
 
 ---
 

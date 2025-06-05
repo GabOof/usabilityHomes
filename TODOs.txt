@@ -1,6 +1,6 @@
 - O timer da pergunta parar após responder, para dar tempo de ler a informação na tela;
 - Não permitir responder várias vezes, clicou na resposta encerrou a pergunta;
 - Aumentar timer da resposta para dar tempo de ler;
-- Criar página principal com iniciar novo jogo e regras;
-- Botão de sair do jogo durante a partida;
+- Criar página principal com iniciar novo jogo e regras; ✅
+- Botão de sair do jogo durante a partida; ✅
 - Botão de Menu Principal e Novo Jogo na tela de Fim de Jogo!

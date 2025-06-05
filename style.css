@@ -294,3 +294,19 @@ button:hover {
     padding: 15px;
   }
 }
+
+.exit-button {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.exit-button:hover {
+  background-color: #c53030;
+}

@@ -3,50 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Usability Homes</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Usability Homes - Menu</title>
+    <script>
+      function iniciarJogo() {
+        window.location.href = "jogo.html"; // troque pelo nome real da página do jogo
+      }
+
+      function mostrarRegras() {
+        alert(
+          "🏠 Regras do Usability Homes:\n\n1. Clique nas empresas para investigar os problemas.\n2. Escolha a heurística de Nielsen correta.\n3. Responda às perguntas para ganhar pontos.\n4. O tempo é limitado, então pense rápido!\n\nBoa sorte!"
+        );
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="game-container">
-      <h1>Usability Homes</h1>
-      <div class="info-bar">
-        <div class="score">Pontuação: <span id="score">0</span></div>
-        <div class="timer">Tempo: <span id="time">60</span>s</div>
-      </div>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center h-screen text-center"
+  >
+    <h1 class="text-4xl font-bold text-gray-800 mb-8">Usability Homes</h1>
 
-      <div class="buildings-container" id="buildings">
-        <!-- As empresas serão inseridas aqui via JavaScript -->
-      </div>
-
-      <div class="problem-modal" id="problemModal">
-        <div class="modal-content">
-          <span class="close-btn" id="closeModal">&times;</span>
-          <h2 id="problemTitle">Problema de Usabilidade</h2>
-          <div class="problem-image-container">
-            <img id="problemImage" src="" alt="Problema de usabilidade" />
-          </div>
-          <div class="question-container">
-            <p>Qual heurística de Nielsen está sendo violada?</p>
-            <div class="options" id="options">
-              <!-- As opções serão inseridas aqui via JavaScript -->
-            </div>
-          </div>
-          <div class="feedback" id="feedback"></div>
-          <div class="time-left">
-            Tempo restante: <span id="questionTime">15</span>s
-          </div>
-        </div>
-      </div>
-
-      <div class="game-over-modal" id="gameOverModal">
-        <div class="modal-content">
-          <h2>Fim do Jogo!</h2>
-          <p>Sua pontuação final: <span id="finalScore">0</span></p>
-          <button id="restartBtn">Jogar Novamente</button>
-        </div>
-      </div>
+    <div class="space-y-4">
+      <button
+        onclick="iniciarJogo()"
+        class="px-6 py-3 bg-blue-600 text-white text-lg rounded-xl shadow hover:bg-blue-700 transition"
+      >
+        🎮 Iniciar Novo Jogo
+      </button>
+      <button
+        onclick="mostrarRegras()"
+        class="px-6 py-3 bg-gray-300 text-gray-800 text-lg rounded-xl shadow hover:bg-gray-400 transition"
+      >
+        📜 Regras
+      </button>
     </div>
-
-    <script type="module" src="script.js"></script>
   </body>
 </html>

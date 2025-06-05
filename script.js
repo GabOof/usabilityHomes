@@ -279,3 +279,10 @@ restartBtn.addEventListener("click", () => {
 
 // Iniciar o jogo quando a página carregar
 window.addEventListener("load", initGame);
+
+document.getElementById("exitBtn").addEventListener("click", () => {
+  const confirmar = confirm("Tem certeza que deseja sair do jogo?");
+  if (confirmar) {
+    window.location.href = "index.html"; // redireciona para a tela principal
+  }
+});

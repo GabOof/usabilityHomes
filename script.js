@@ -144,7 +144,7 @@ function showCompanyProblem(companyId) {
   feedbackElement.className = "feedback";
 
   // Configurar temporizador da pergunta
-  let questionTimeLeft = 15;
+  let questionTimeLeft = 30;
   questionTimeElement.textContent = questionTimeLeft;
 
   // Limpar temporizador anterior se existir

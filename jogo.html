@@ -17,8 +17,7 @@
       </div>
 
       <div class="buildings-container" id="buildings">
-        <!-- As empresas serão inseridas aqui via JavaScript -->
-      </div>
+        </div>
 
       <div class="problem-modal" id="problemModal">
         <div class="modal-content">
@@ -30,14 +29,13 @@
           <div class="question-container">
             <p>Qual heurística de Nielsen está sendo violada?</p>
             <div class="options" id="options">
-              <!-- As opções serão inseridas aqui via JavaScript -->
-            </div>
+              </div>
           </div>
           <div class="feedback" id="feedback"></div>
           <div class="time-left">
             Tempo restante: <span id="questionTime">30</span>s
           </div>
-          <button id="closeQuestionBtn" style="display: none">Fechar</button>
+          <button id="closeQuestionBtn" style="display: none">Próximo</button>
         </div>
       </div>
 
@@ -45,6 +43,9 @@
         <div class="modal-content">
           <h2>Fim do Jogo!</h2>
           <p>Sua pontuação final: <span id="finalScore">0</span></p>
+
+          <div id="companyResultsSummary">
+            </div>
           <button id="restartBtn">Jogar Novamente</button>
           <button id="exitBtnGameOver" class="exit-button">Sair</button>
         </div>

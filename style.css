@@ -324,3 +324,13 @@ button:hover {
 #closeQuestionBtn:hover {
   background-color: #666;
 }
+
+.building.completed {
+  opacity: 0.5; 
+  pointer-events: none; /* Desabilita cliques em prédios concluídos */
+  cursor: default;
+}
+
+.building.completed .alert {
+  display: none; /* Garante que o alerta não apareça em prédios concluídos */
+}

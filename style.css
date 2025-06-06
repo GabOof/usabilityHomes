@@ -310,3 +310,17 @@ button:hover {
 .exit-button:hover {
   background-color: #c53030;
 }
+
+#closeQuestionBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#closeQuestionBtn:hover {
+  background-color: #666;
+}

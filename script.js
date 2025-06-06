@@ -1,4 +1,3 @@
-// Importar dados dos problemas
 import { companies, heuristics } from "./data/problems.js";
 
 console.log("Script carregado");
@@ -31,6 +30,7 @@ const questionTimeElement = document.getElementById("questionTime");
 const gameOverModal = document.getElementById("gameOverModal");
 const finalScoreElement = document.getElementById("finalScore");
 const restartBtn = document.getElementById("restartBtn");
+const closeQuestionBtn = document.getElementById("closeQuestionBtn");
 
 // Atualizar tempo decorrido
 function updateElapsedTime() {
@@ -143,6 +143,7 @@ function showCompanyProblem(companyId) {
   // Resetar feedback
   feedbackElement.textContent = "";
   feedbackElement.className = "feedback";
+  closeQuestionBtn.style.display = "none";
 
   // Configurar temporizador da pergunta
   let questionTimeLeft = 30;
@@ -199,6 +200,8 @@ function handleAnswer(selectedHeuristic) {
 
   // Parar o temporizador da pergunta
   clearInterval(questionTimer);
+  const options = document.querySelectorAll(".option");
+  options.forEach((btn) => (btn.style.pointerEvents = "none"));
 
   // Verificar se a resposta está correta
   if (selectedHeuristic === currentProblem.heuristic) {
@@ -210,8 +213,7 @@ function handleAnswer(selectedHeuristic) {
     // Resposta incorreta
     feedbackElement.textContent = `Incorreto! A heurística correta é: ${currentProblem.heuristic}`;
     feedbackElement.className = "feedback incorrect";
-    score -= 200;
-    if (score < 0) score = 0;
+    score = Math.max(score - 200, 0);
   }
 
   // Adicionar explicação
@@ -221,19 +223,16 @@ function handleAnswer(selectedHeuristic) {
 
   // Atualizar pontuação
   updateScore();
-
-  // Fechar a modal após 3 segundos
-  setTimeout(() => {
-    problemModal.style.display = "none";
-    // Reiniciar alertas aleatórios
-    startRandomAlerts();
-    checkEndGame();
-  }, 3000);
+  closeQuestionBtn.style.display = "block";
 }
 
 // Tempo esgotado para responder
 function handleTimeOut() {
   questionAnswered = true;
+
+  clearInterval(questionTimer);
+  const options = document.querySelectorAll(".option");
+  options.forEach((btn) => (btn.style.pointerEvents = "none"));
 
   feedbackElement.textContent = "Tempo esgotado! Nenhum ponto ganho.";
   feedbackElement.className = "feedback incorrect";
@@ -242,13 +241,7 @@ function handleTimeOut() {
   explanationElement.textContent = currentProblem.explanation;
   feedbackElement.appendChild(explanationElement);
 
-  // Fechar a modal após 3 segundos
-  setTimeout(() => {
-    problemModal.style.display = "none";
-    // Reiniciar alertas aleatórios
-    startRandomAlerts();
-    checkEndGame();
-  }, 3000);
+  closeQuestionBtn.style.display = "block";
 }
 
 // Atualizar pontuação
@@ -256,11 +249,8 @@ function updateScore() {
   scoreElement.textContent = score;
 }
 
-// Verificar fim de jogo
 function checkEndGame() {
-  if (score >= 1000) {
-    endGame();
-  }
+  if (score >= 1000) endGame();
 }
 
 // Finalizar jogo
@@ -279,6 +269,13 @@ closeModalBtn.addEventListener("click", () => {
   problemModal.style.display = "none";
   // Reiniciar alertas aleatórios
   startRandomAlerts();
+});
+
+closeQuestionBtn.addEventListener("click", () => {
+  problemModal.style.display = "none";
+  closeQuestionBtn.style.display = "none";
+  startRandomAlerts();
+  checkEndGame();
 });
 
 restartBtn.addEventListener("click", () => {

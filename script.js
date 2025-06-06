@@ -9,8 +9,8 @@ companies.forEach((company) => {
 
 // Variáveis do jogo
 let score = 0;
-let timeLeft = 60;
-let gameTimer;
+let elapsedTime = 0;
+let elapsedTimer;
 let questionTimer;
 let currentProblem = null;
 let alertCompanyId = null;
@@ -31,17 +31,17 @@ const gameOverModal = document.getElementById("gameOverModal");
 const finalScoreElement = document.getElementById("finalScore");
 const restartBtn = document.getElementById("restartBtn");
 
-// Adicione esta função antes de initGame()
-function updateTimer() {
-  timeElement.textContent = timeLeft;
+// Atualizar tempo decorrido
+function updateElapsedTime() {
+  timeElement.textContent = elapsedTime;
 }
 
 // Inicializar o jogo
 function initGame() {
   score = 0;
-  timeLeft = 60;
+  elapsedTime = 0;
   updateScore();
-  updateTimer();
+  updateElapsedTime();
 
   // Criar os prédios das empresas
   buildingsContainer.innerHTML = "";
@@ -49,9 +49,7 @@ function initGame() {
     const buildingElement = document.createElement("div");
     buildingElement.className = "building";
     buildingElement.id = company.id;
-    buildingElement.innerHTML = `
-            <img src="${company.image}" alt="${company.name}">
-        `;
+    buildingElement.innerHTML = `<img src="${company.image}" alt="${company.name}">`;
     buildingElement.addEventListener("click", () =>
       handleBuildingClick(company.id)
     );
@@ -59,7 +57,10 @@ function initGame() {
   });
 
   // Iniciar temporizador do jogo
-  gameTimer = setInterval(updateGameTimer, 1000);
+  elapsedTimer = setInterval(() => {
+    elapsedTime++;
+    updateElapsedTime();
+  }, 1000);
 
   // Iniciar alertas aleatórios
   startRandomAlerts();
@@ -204,6 +205,8 @@ function handleAnswer(selectedHeuristic) {
     // Resposta incorreta
     feedbackElement.textContent = `Incorreto! A heurística correta é: ${currentProblem.heuristic}`;
     feedbackElement.className = "feedback incorrect";
+    score -= 200;
+    if (score < 0) score = 0;
   }
 
   // Adicionar explicação
@@ -219,6 +222,7 @@ function handleAnswer(selectedHeuristic) {
     problemModal.style.display = "none";
     // Reiniciar alertas aleatórios
     startRandomAlerts();
+    checkEndGame();
   }, 3000);
 }
 
@@ -236,6 +240,7 @@ function handleTimeOut() {
     problemModal.style.display = "none";
     // Reiniciar alertas aleatórios
     startRandomAlerts();
+    checkEndGame();
   }, 3000);
 }
 
@@ -244,19 +249,16 @@ function updateScore() {
   scoreElement.textContent = score;
 }
 
-// Atualizar temporizador do jogo
-function updateGameTimer() {
-  timeLeft--;
-  timeElement.textContent = timeLeft;
-
-  if (timeLeft <= 0) {
+// Verificar se o jogo terminou
+function checkEndGame() {
+  if (score >= 1000) {
     endGame();
   }
 }
 
 // Finalizar o jogo
 function endGame() {
-  clearInterval(gameTimer);
+  clearInterval(elapsedTimer);
   clearInterval(alertInterval);
   if (questionTimer) clearInterval(questionTimer);
 

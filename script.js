@@ -15,6 +15,7 @@ let questionTimer;
 let currentProblem = null;
 let alertCompanyId = null;
 let alertInterval;
+let questionAnswered = false;
 
 // Elementos do DOM
 const buildingsContainer = document.getElementById("buildings");
@@ -123,7 +124,7 @@ function handleBuildingClick(companyId) {
   }
 }
 
-// Mostrar problema de uma empresa
+// Mostrar problema da empresa
 function showCompanyProblem(companyId) {
   const company = companies.find((c) => c.id === companyId);
   const randomProblemIndex = Math.floor(
@@ -150,6 +151,7 @@ function showCompanyProblem(companyId) {
   // Limpar temporizador anterior se existir
   if (questionTimer) clearInterval(questionTimer);
 
+  questionAnswered = false;
   questionTimer = setInterval(() => {
     questionTimeLeft--;
     questionTimeElement.textContent = questionTimeLeft;
@@ -192,6 +194,9 @@ function generateQuestionOptions(correctHeuristic) {
 
 // Manipular resposta do jogador
 function handleAnswer(selectedHeuristic) {
+  if (questionAnswered) return;
+  questionAnswered = true;
+
   // Parar o temporizador da pergunta
   clearInterval(questionTimer);
 
@@ -228,6 +233,8 @@ function handleAnswer(selectedHeuristic) {
 
 // Tempo esgotado para responder
 function handleTimeOut() {
+  questionAnswered = true;
+
   feedbackElement.textContent = "Tempo esgotado! Nenhum ponto ganho.";
   feedbackElement.className = "feedback incorrect";
 
@@ -249,14 +256,14 @@ function updateScore() {
   scoreElement.textContent = score;
 }
 
-// Verificar se o jogo terminou
+// Verificar fim de jogo
 function checkEndGame() {
   if (score >= 1000) {
     endGame();
   }
 }
 
-// Finalizar o jogo
+// Finalizar jogo
 function endGame() {
   clearInterval(elapsedTimer);
   clearInterval(alertInterval);
@@ -267,7 +274,7 @@ function endGame() {
   gameOverModal.style.display = "flex";
 }
 
-// Event listeners
+// Listeners
 closeModalBtn.addEventListener("click", () => {
   problemModal.style.display = "none";
   // Reiniciar alertas aleatórios
@@ -287,4 +294,8 @@ document.getElementById("exitBtn").addEventListener("click", () => {
   if (confirmar) {
     window.location.href = "index.html"; // redireciona para a tela principal
   }
+});
+
+document.getElementById("exitBtnGameOver").addEventListener("click", () => {
+  window.location.href = "index.html";
 });

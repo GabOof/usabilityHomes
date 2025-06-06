@@ -3,4 +3,4 @@
 - Aumentar timer da resposta para dar tempo de ler;
 - Criar página principal com iniciar novo jogo e regras; ✅
 - Botão de sair do jogo durante a partida; ✅
-- Botão de Menu Principal e Novo Jogo na tela de Fim de Jogo!
+- Botão de Menu Principal e Novo Jogo na tela de Fim de Jogo! ✅

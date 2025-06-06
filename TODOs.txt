@@ -1,4 +1,4 @@
-- O timer da pergunta parar após responder, para dar tempo de ler a informação na tela;
+- O timer da pergunta para após responder, para dar tempo de ler a informação na tela; ✅
 - Não permitir responder várias vezes, clicou na resposta encerrou a pergunta;
 - Aumentar timer da resposta para dar tempo de ler;
 - Criar página principal com iniciar novo jogo e regras; ✅
@@ -7,3 +7,4 @@
 - Definir respostas manualmente (3) e não automaticamente como está;
 - Lógica para não repetir as perguntas da empresa durante das rodadas;
 - Placar no final mostrando quantas respostas você acertou de cada empresa (empresas falidas - 1/3 ou 2/3 e empresa salva - 3/3);
+- Mostrar botão para sair da pergunta após responder (possibilitanto ler as informações na tela);

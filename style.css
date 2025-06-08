@@ -249,19 +249,6 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Debug - pode remover depois */
-.building::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px dashed rgba(255, 0, 0, 0.3);
-  border-radius: 10px;
-  pointer-events: none;
-}
-
 @media (max-width: 768px) {
   .buildings-container {
     grid-template-columns: repeat(2, 1fr);
@@ -326,7 +313,7 @@ button:hover {
 }
 
 .building.completed {
-  opacity: 0.5; 
+  opacity: 0.5;
   pointer-events: none; /* Desabilita cliques em prédios concluídos */
   cursor: default;
 }

@@ -5,7 +5,7 @@ const heuristics = [
   "Controle e liberdade do usuário",
   "Consistência e padrões",
   "Prevenção de erros",
-  "Reconhecimento em vez de memorização", 
+  "Reconhecimento em vez de memorização",
   "Flexibilidade e eficiência de uso",
   "Estética e design minimalista",
   "Ajuda os usuários a reconhecer, diagnosticar e recuperar-se de erros",
@@ -26,11 +26,11 @@ const companies = [
         heuristic: "Visibilidade do status do sistema",
         explanation:
           "O sistema deve sempre manter os usuários informados sobre o que está acontecendo, através de feedback adequado e em tempo razoável. Campos obrigatórios devem ser claramente marcados.",
-        options: [ 
+        options: [
           "Visibilidade do status do sistema",
-           "Consistência e padrões",
-          "Estética e design minimalista"
-        ]
+          "Consistência e padrões",
+          "Estética e design minimalista",
+        ],
       },
       {
         image: "assets/problems/escola/escola2.png",
@@ -39,24 +39,24 @@ const companies = [
         heuristic: "Compatibilidade entre o sistema e o mundo real",
         explanation:
           "O sistema deve falar a linguagem dos usuários, com palavras, frases e conceitos familiares ao usuário, em vez de termos orientados ao sistema. Mensagens de erro devem ser expressas em linguagem simples.",
-        options: [ 
+        options: [
           "Compatibilidade entre o sistema e o mundo real",
           "Visibilidade do status do sistema",
-          "Ajuda e documentação"
-        ]
+          "Ajuda e documentação",
+        ],
       },
       {
         image: "assets/problems/escola/escola3.png",
-        description:
-          'Envio de formulário com mensagens de erro pouco clara',
-        heuristic: "Ajuda os usuários a reconhecer, diagnosticar e recuperar-se de erros",
+        description: "Envio de formulário com mensagens de erro pouco clara",
+        heuristic:
+          "Ajuda os usuários a reconhecer, diagnosticar e recuperar-se de erros",
         explanation:
           "Mesmo que um sistema possa ser usado sem documentação, é necessário que haja ajuda e documentação de fácil acesso. Mensagens de erro devem ser claras, concisas e oferecer sugestões construtivas para que o usuário possa corrigir o problema.",
-        options: [ 
+        options: [
           "Ajuda os usuários a reconhecer, diagnosticar e recuperar-se de erros",
           "Compatibilidade entre o sistema e o mundo real",
-          "Reconhecimento em vez de memorização"
-        ]
+          "Reconhecimento em vez de memorização",
+        ],
       },
     ],
   },
@@ -72,11 +72,11 @@ const companies = [
         heuristic: "Compatibilidade entre o sistema e o mundo real",
         explanation:
           "O sistema deve falar a linguagem dos usuários, com palavras, frases e conceitos familiares a eles, em vez de termos orientados ao sistema. Informações financeiras devem ser apresentadas de forma clara e compreensível, sem exigir conhecimento técnico aprofundado",
-        options: [ 
+        options: [
           "Compatibilidade entre o sistema e o mundo real",
           "Estética e design minimalista",
-          "Reconhecimento em vez de memorização"
-        ]
+          "Reconhecimento em vez de memorização",
+        ],
       },
       {
         image: "assets/problems/banco/banco2.png",
@@ -85,11 +85,11 @@ const companies = [
         heuristic: "Prevenção de erros",
         explanation:
           "Melhor do que boas mensagens de erro é um design cuidadoso que previne a ocorrência de problemas. Confirmações antes de ações críticas previnem erros.",
-        options: [ 
+        options: [
           "Prevenção de erros",
           "Controle e liberdade do usuário",
-          "Visibilidade do status do sistema"
-        ]
+          "Visibilidade do status do sistema",
+        ],
       },
       {
         image: "assets/problems/banco/banco3.png",
@@ -98,11 +98,11 @@ const companies = [
         heuristic: "Estética e design minimalista",
         explanation:
           "Um sistema não devem conter informações irrelevantes ou raramente necessárias. Em um aplicativo bancário, cada informação extra compete com as unidades de informação relevantes, tornando mais difícil para o usuário encontrar o que é realmente importante, como o saldo da conta ou as opções de transação.",
-        options: [ 
+        options: [
           "Estética e design minimalista",
           "Flexibilidade e eficiência de uso",
-          "Visibilidade do status do sistema"
-        ]
+          "Visibilidade do status do sistema",
+        ],
       },
     ],
   },
@@ -117,11 +117,11 @@ const companies = [
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
           "Minimize a carga de memória do usuário tornando objetos, ações e opções visíveis. O usuário não deve ter que lembrar de informações de uma parte do diálogo para outra.",
-        options: [ 
+        options: [
           "Reconhecimento em vez de memorização",
           "Visibilidade do status do sistema",
-          "Estética e design minimalista"
-        ]
+          "Estética e design minimalista",
+        ],
       },
       {
         image: "assets/problems/loja/loja2.png",
@@ -130,11 +130,11 @@ const companies = [
         heuristic: "Flexibilidade e eficiência de uso", // Reavaliada para Flexibilidade e eficiência de uso
         explanation:
           "Aceleradores - não vistos pelo usuário novato - podem frequentemente acelerar a interação para o usuário experiente de forma que o sistema possa atender tanto a usuários inexperientes como experientes. Pedir informações desnecessárias adiciona passos e lentidão, prejudicando a eficiência.",
-        options: [ 
+        options: [
           "Flexibilidade e eficiência de uso",
           "Estética e design minimalista",
-          "Prevenção de erros"
-        ]
+          "Prevenção de erros",
+        ],
       },
       {
         image: "assets/problems/loja/loja3.png",
@@ -143,11 +143,11 @@ const companies = [
         heuristic: "Controle e liberdade do usuário",
         explanation:
           "Os usuários geralmente escolhem funções do sistema por engano ou mudam de ideia e precisarão de uma 'saída de emergência' claramente marcada para sair da situação indesejada. No carrinho de compras, o usuário deve ter total controle para adicionar, remover ou ajustar itens facilmente, sem impedimentos ou etapas extras.",
-        options: [ 
+        options: [
           "Controle e liberdade do usuário",
           "Flexibilidade e eficiência de uso",
-          "Visibilidade do status do sistema"
-        ]
+          "Visibilidade do status do sistema",
+        ],
       },
     ],
   },
@@ -157,40 +157,41 @@ const companies = [
     image: "assets/buildings/hospital.png",
     problems: [
       {
-        image: "assets/problems/teste.png",
+        image: "assets/problems/hospital1.png",
         description: "Agendamento de consultas sem calendário visual",
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
           "Minimize a carga de memória do usuário tornando objetos, ações e opções visíveis. Um calendário visual ajuda mais do que campos de data.",
-        options: [ 
+        options: [
           "Reconhecimento em vez de memorização",
           "Visibilidade do status do sistema",
-          "Estética e design minimalista"
-        ]
+          "Estética e design minimalista",
+        ],
       },
       {
-        image: "assets/problems/teste.png",
+        image: "assets/problems/hospital2.png",
         description: "Termos médicos complexos sem explicação para pacientes",
         heuristic: "Compatibilidade entre o sistema e o mundo real",
         explanation:
           "O sistema deve falar a linguagem dos usuários, com palavras, frases e conceitos familiares ao usuário, em vez de termos orientados ao sistema.",
-        options: [ 
+        options: [
           "Compatibilidade entre o sistema e o mundo real",
           "Ajuda e documentação",
-          "Reconhecimento em vez de memorização"
-        ]
+          "Reconhecimento em vez de memorização",
+        ],
       },
       {
-        image: "assets/problems/teste.png",
-        description: "Não há como desfazer o cancelamento de uma consulta",
+        image: "assets/problems/hospital3.png",
+        description:
+          "Usuário não consegue copiar um código extenso para liberação de exame",
         heuristic: "Controle e liberdade do usuário",
         explanation:
-          'Usuários frequentemente escolhem funções do sistema por engano e precisam de uma "saída de emergência" claramente marcada para sair do estado indesejado sem ter que passar por diálogos extensos.',
-        options: [ 
+          "O sistema deve permitir que os usuários copiem facilmente informações complexas como códigos longos, evitando a necessidade de digitação manual, que é propensa a erros.",
+        options: [
           "Controle e liberdade do usuário",
           "Prevenção de erros",
-          "Visibilidade do status do sistema"
-        ]
+          "Reconhecimento em vez de memorização",
+        ],
       },
     ],
   },
@@ -205,11 +206,11 @@ const companies = [
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
           "Minimize a carga de memória do usuário tornando objetos, ações e opções visíveis. Fotos ajudam usuários a reconhecer pratos em vez de ter que lembrar descrições textuais.",
-        options: [ 
+        options: [
           "Reconhecimento em vez de memorização",
           "Estética e design minimalista",
-          "Compatibilidade entre o sistema e o mundo real"
-        ]
+          "Compatibilidade entre o sistema e o mundo real",
+        ],
       },
       {
         image: "assets/problems/teste.png",
@@ -217,11 +218,11 @@ const companies = [
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
           "Minimize a carga de memória do usuário tornando objetos, ações e opções visíveis. O fluxo deve ser óbvio e intuitivo.",
-        options: [ 
+        options: [
           "Reconhecimento em vez de memorização",
           "Visibilidade do status do sistema",
-          "Ajuda e documentação"
-        ]
+          "Ajuda e documentação",
+        ],
       },
       {
         image: "assets/problems/teste.png",
@@ -230,11 +231,11 @@ const companies = [
         heuristic: "Flexibilidade e eficiência de uso",
         explanation:
           "Aceleradores - não vistos pelo usuário novato - podem frequentemente acelerar a interação para o usuário experiente. Opções comuns devem ser facilmente acessíveis.",
-        options: [ 
+        options: [
           "Flexibilidade e eficiência de uso",
           "Estética e design minimalista",
-          "Reconhecimento em vez de memorização"
-        ]
+          "Reconhecimento em vez de memorização",
+        ],
       },
     ],
   },
@@ -249,11 +250,11 @@ const companies = [
         heuristic: "Visibilidade do status do sistema",
         explanation:
           "O sistema deve sempre manter os usuários informados sobre o que está acontecendo, através de feedback adequado e em tempo razoável.",
-        options: [ 
+        options: [
           "Visibilidade do status do sistema",
           "Consistência e padrões",
-          "Ajuda e documentação"
-        ]
+          "Ajuda e documentação",
+        ],
       },
       {
         image: "assets/problems/teste.png",
@@ -261,11 +262,11 @@ const companies = [
         heuristic: "Ajuda e documentação",
         explanation:
           "Mesmo que seja melhor que o sistema possa ser usado sem documentação, pode ser necessário fornecer ajuda e documentação. Qualquer informação deve ser fácil de procurar, focada na tarefa do usuário e listar passos concretos a serem seguidos.",
-        options: [ 
+        options: [
           "Ajuda e documentação",
           "Prevenção de erros",
-          "Compatibilidade entre o sistema e o mundo real"
-        ]
+          "Compatibilidade entre o sistema e o mundo real",
+        ],
       },
       {
         image: "assets/problems/teste.png",
@@ -273,11 +274,11 @@ const companies = [
         heuristic: "Controle e liberdade do usuário",
         explanation:
           'Usuários frequentemente escolhem funções do sistema por engano e precisam de uma "saída de emergência" claramente marcada para sair do estado indesejado sem ter que passar por diálogos extensos.',
-        options: [ 
+        options: [
           "Controle e liberdade do usuário",
           "Prevenção de erros",
-          "Flexibilidade e eficiência de uso"
-        ]
+          "Flexibilidade e eficiência de uso",
+        ],
       },
     ],
   },

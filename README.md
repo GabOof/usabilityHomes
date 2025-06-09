@@ -19,7 +19,7 @@
    - Respostas erradas: −200 pontos
 7. **Feedback**: Após cada resposta, você recebe uma explicação detalhada.
 8. **Controle de Fluxo**: Use o botão "Próximo" para avançar na sequência de problemas.
-9. **Objetivo**: Resolva todos os problemas das empresas para vencer.
+9. **Objetivo**: Alcance 1000 pontos OU resolva todos os problemas das empresas para vencer.
 10. **Tempo Total**: O tempo decorrido é exibido como informação adicional.
 
 ## 🏆 Final do Jogo

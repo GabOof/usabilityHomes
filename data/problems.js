@@ -157,7 +157,7 @@ const companies = [
     image: "assets/buildings/hospital.png",
     problems: [
       {
-        image: "assets/problems/hospital1.png",
+        image: "assets/problems/hospital/hospital1.png",
         description: "Agendamento de consultas sem calendário visual",
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
@@ -169,7 +169,7 @@ const companies = [
         ],
       },
       {
-        image: "assets/problems/hospital2.png",
+        image: "assets/problems/hospital/hospital2.png",
         description: "Termos médicos complexos sem explicação para pacientes",
         heuristic: "Compatibilidade entre o sistema e o mundo real",
         explanation:
@@ -181,7 +181,7 @@ const companies = [
         ],
       },
       {
-        image: "assets/problems/hospital3.png",
+        image: "assets/problems/hospital/hospital3.png",
         description:
           "Usuário não consegue copiar um código extenso para liberação de exame",
         heuristic: "Controle e liberdade do usuário",
@@ -201,7 +201,7 @@ const companies = [
     image: "assets/buildings/restaurante.png",
     problems: [
       {
-        image: "assets/problems/restaurante1.png",
+        image: "assets/problems/restaurante/restaurante1.png",
         description: "Menu digital sem fotos dos pratos",
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
@@ -213,7 +213,7 @@ const companies = [
         ],
       },
       {
-        image: "assets/problems/restaurante2.png",
+        image: "assets/problems/restaurante/restaurante2.png",
         description: "Não há botão claro para fazer pedidos na página de menu",
         heuristic: "Consistência e padrões",
         explanation:
@@ -226,7 +226,7 @@ const companies = [
       },
 
       {
-        image: "assets/problems/restaurante3.png",
+        image: "assets/problems/restaurante/restaurante3.png",
         description: "Tela de pagamento não oferece opção de salvar o cartão",
         heuristic: "Flexibilidade e eficiência de uso",
         explanation:
@@ -245,7 +245,7 @@ const companies = [
     image: "assets/buildings/aeroporto.png",
     problems: [
       {
-        image: "assets/problems/aeroporto1.png",
+        image: "assets/problems/aeroporto/aeroporto1.png",
         description:
           "Mensagem de erro genérica sem indicação de como corrigir o problema",
         heuristic:
@@ -259,7 +259,7 @@ const companies = [
         ],
       },
       {
-        image: "assets/problems/aeroporto2.png",
+        image: "assets/problems/aeroporto/aeroporto2.png",
         description:
           "Sistema permite que o usuário insira informações incompatíveis, como data de retorno anterior à data de ida",
         heuristic: "Prevenção de erros",
@@ -272,7 +272,7 @@ const companies = [
         ],
       },
       {
-        image: "assets/problems/aeroporto3.png",
+        image: "assets/problems/aeroporto/aeroporto3.png",
         description: "Processo de check-in com muitas etapas irreversíveis",
         heuristic: "Controle e liberdade do usuário",
         explanation:

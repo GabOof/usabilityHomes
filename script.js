@@ -35,7 +35,7 @@ const gameOverModal = document.getElementById("gameOverModal");
 const finalScoreElement = document.getElementById("finalScore");
 const restartBtn = document.getElementById("restartBtn");
 const closeQuestionBtn = document.getElementById("closeQuestionBtn");
-const QUESTION_TIMES = [30, 20, 10]; // TEMPOS: 1ª pergunta: 30s, 2ª: 20s, 3ª: 10s
+const QUESTION_TIMES = [40, 30, 20]; // TEMPOS: 1ª pergunta: 40s, 2ª: 30s, 3ª: 20s
 
 // Pontuação por empresa
 const companyResultsSummaryElement = document.getElementById("companyResultsSummary");

@@ -7,65 +7,81 @@
 ## 🎮 Como Jogar
 
 1. **Empresas com Problemas**: Seis empresas de diferentes ramos aparecerão na tela.
-2. **Alertas**: Fique atento aos prédios que acendem o sinal de alerta (!).
-3. **Resolução**: Clique no prédio com alerta para visualizar o problema de usabilidade.
-4. **Diagnóstico**: Escolha qual heurística de Nielsen está sendo violada.
-5. **Pontuação**:
-
+2. **Alertas Aleatórios**: Fique atento aos prédios que acendem o sinal de alerta (!) - eles aparecem aleatoriamente.
+3. **Sequência de Problemas**: Cada empresa possui 3 problemas sequenciais:
+   - 1ª pergunta: 40 segundos para responder
+   - 2ª pergunta: 30 segundos para responder
+   - 3ª pergunta: 20 segundos para responder
+4. **Resolução**: Clique no prédio com alerta para visualizar o problema de usabilidade.
+5. **Diagnóstico**: Escolha qual heurística de Nielsen está sendo violada.
+6. **Pontuação**:
    - Respostas corretas: +100 pontos
    - Respostas erradas: −200 pontos
+7. **Feedback**: Após cada resposta, você recebe uma explicação detalhada.
+8. **Controle de Fluxo**: Use o botão "Próximo" para avançar na sequência de problemas.
+9. **Objetivo**: Resolva todos os problemas das empresas para vencer.
+10. **Tempo Total**: O tempo decorrido é exibido como informação adicional.
 
-6. **Tempo de Resposta**: Você tem 30 segundos para responder cada problema.
-7. **Leitura Após Resposta**: Após responder (ou esgotar o tempo), você pode ler a explicação e clicar no botão **"Fechar"** para voltar ao jogo no seu ritmo.
-8. **Objetivo**: Alcance 1000 pontos para vencer o jogo.
-9. **Tempo de Jogo**: O tempo total decorrido é exibido apenas como informação.
+## 🏆 Final do Jogo
+
+Ao terminar, você verá:
+
+- Pontuação final
+- Resumo de desempenho por empresa (acertos/total de problemas)
+- Opção para jogar novamente ou sair
 
 ## 🛠️ Tecnologias Utilizadas
 
 - HTML5
 - CSS3
 - JavaScript (ES6 Modules)
+- Tailwind CSS (para estilização)
 - Design Responsivo
+- Google Fonts (Poppins)
 
-## 📂 Estrutura de Arquivos
+## 📂 Estrutura de Arquivos Atualizada
 
 ```
+
 /usability-homes/
-├── index.html          # Página principal do jogo
-├── style.css           # Estilos do jogo
-├── script.js           # Lógica principal do jogo
+├── index.html # Tela inicial do jogo
+├── jogo.html # Tela principal do jogo
+├── style.css # Estilos do jogo
+├── script.js # Lógica principal do jogo (módulo ES6)
 ├── data/
-│   └── problems.js     # Dados das empresas e problemas
+│ └── problems.js # Dados das empresas e problemas (export como módulo)
 ├── assets/
-│   ├── buildings/      # Imagens dos prédios das empresas
-│   └── problems/       # Screenshots dos problemas de usabilidade
-└── README.md           # Este arquivo
+│ ├── logo/ # Logo do jogo
+│ ├── buildings/ # Imagens dos prédios das empresas
+│ └── problems/ # Screenshots dos problemas de usabilidade (organizados por empresa)
+└── README.md # Documentação
+
 ```
 
 ## 🚀 Como Executar
 
-1. Clone o repositório ou baixe os arquivos.
-2. Abra o projeto em um servidor local (recomendado: extensão **Live Server** no VS Code).
-3. Acesse o `index.html` no navegador.
-
-> ⚠️ **Importante**: O jogo deve ser executado em um servidor local devido ao uso de módulos JavaScript (ES6).
+1. Clone o repositório ou baixe os arquivos
+2. Abra o projeto em um servidor local (necessário devido aos módulos ES6)
+   - Recomendado: extensão **Live Server** no VS Code
+3. Acesse o `index.html` no navegador
 
 ## ✨ Recursos Implementados
 
-- Sistema de pontuação com feedback imediato
-- Temporizador por pergunta (30 segundos)
-- Tempo total decorrido exibido na interface
-- Seleção aleatória de problemas e opções de resposta
-- Explicação detalhada da resposta após cada tentativa
-- **Botão "Fechar"** após responder, permitindo o jogador permanecer na tela para leitura
+- Sistema de pontuação dinâmico
+- Temporizador adaptável por nível de problema (40s, 30s, 20s)
+- Sequência de 3 problemas por empresa
+- Feedback imediato com explicações detalhadas
+- Controle de fluxo com botão "Próximo"
+- Sistema de alertas aleatórios
+- Resumo de desempenho por empresa no final
 - Animações e efeitos visuais
-- Design responsivo para diferentes tamanhos de tela
-- Modal de fim de jogo ao atingir 1000 pontos
-- Opção de reinício após o fim do jogo
+- Design responsivo
+- Modal de fim de jogo com opções de reinício
+- Persistência de estado durante a sequência de problemas
 
-## 📚 Heurísticas de Nielsen Utilizadas
+## 📚 Heurísticas de Nielsen Abordadas
 
-O jogo aborda as 10 heurísticas de usabilidade de Jakob Nielsen:
+O jogo cobre todas as 10 heurísticas com exemplos práticos:
 
 1. Visibilidade do status do sistema
 2. Compatibilidade entre o sistema e o mundo real
@@ -78,15 +94,6 @@ O jogo aborda as 10 heurísticas de usabilidade de Jakob Nielsen:
 9. Ajude os usuários a reconhecer, diagnosticar e recuperar-se de erros
 10. Ajuda e documentação
 
-## 📌 Personalização
-
-Você pode facilmente:
-
-- Adicionar mais empresas e problemas editando `data/problems.js`
-- Alterar o tempo para responder cada problema no `script.js`
-- Adicionar novas imagens na pasta `assets/problems/`
-- Ajustar o estilo visual em `style.css`
-
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para:
@@ -94,12 +101,14 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 - Reportar issues
 - Sugerir melhorias
 - Adicionar novos problemas e empresas
+- Propor melhorias na jogabilidade
 
 ## 👥 Autores
 
 Gabrielle de Oliveira Fonseca - 0072379
+
 Mariana Moreira - 0076895
 
 ---
 
-Desenvolvido com ♥ para o aprendizado de princípios de usabilidade.
+Desenvolvido com ♥ para o aprendizado de princípios de usabilidade e experiência do usuário.

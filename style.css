@@ -321,3 +321,39 @@ button:hover {
 .building.completed .alert {
   display: none; /* Garante que o alerta não apareça em prédios concluídos */
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff; /* Fundo branco simples */
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.glass {
+  background: rgba(255 255 255 / 0.9);
+  border-radius: 24px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo simples, maior e arredondada */
+.logo-wrapper {
+  max-width: 220px;
+  margin-bottom: 24px;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}

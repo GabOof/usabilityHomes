@@ -1,49 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
     <title>Usability Homes - Menu</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       function iniciarJogo() {
-        window.location.href = "jogo.html"; // troque pelo nome real da página do jogo
+        window.location.href = "jogo.html";
       }
-
       function mostrarRegras() {
         alert(
           "🏠 Regras do Usability Homes:\n\n1. Clique nas empresas para investigar os problemas.\n2. Escolha a heurística de Nielsen correta.\n3. Responda às perguntas para ganhar pontos.\n4. O tempo é limitado, então pense rápido!\n\nBoa sorte!"
         );
       }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body
-    class="bg-gray-100 flex flex-col items-center justify-center h-screen text-center"
-  >
-    <!-- Logo -->
-    <img
-      src="assets/logo/logo.png"
-      alt="Logo Usability Homes"
-      class="w-40 h-auto mb-6"
-    />
-
-    <!-- Título -->
-    <h1 class="text-4xl font-bold text-gray-800 mb-8">Usability Homes</h1>
-
-    <!-- Botões -->
-    <div class="space-y-4">
-      <button
-        onclick="iniciarJogo()"
-        class="px-6 py-3 bg-blue-600 text-white text-lg rounded-xl shadow hover:bg-blue-700 transition"
+  <body class="min-h-screen flex items-center justify-center px-6">
+    <main
+      class="relative z-10 max-w-5xl w-full flex flex-col md:flex-row items-center md:justify-between p-12 gap-16 glass fade-in"
+      style="min-height: 80vh"
+    >
+      <!-- Logo e texto -->
+      <section
+        class="flex flex-col items-center md:items-start max-w-md text-center md:text-left space-y-6"
       >
-        🎮 Iniciar Novo Jogo
-      </button>
-      <button
-        onclick="mostrarRegras()"
-        class="px-6 py-3 bg-gray-300 text-gray-800 text-lg rounded-xl shadow hover:bg-gray-400 transition"
-      >
-        📜 Regras
-      </button>
-    </div>
+        <div class="logo-wrapper">
+          <img
+            src="assets/logo/logo.png"
+            alt="Logo Usability Homes"
+            loading="lazy"
+          />
+        </div>
+        <h1 class="text-6xl font-extrabold text-gray-900 leading-tight">
+          Usability Homes
+        </h1>
+        <p class="text-gray-800 text-lg md:text-xl max-w-md font-medium">
+          Explore as heurísticas de Nielsen e teste seus conhecimentos de forma
+          divertida e rápida!
+        </p>
+      </section>
+
+      <!-- Botões -->
+      <section class="flex flex-col w-full max-w-xs gap-8">
+        <button
+          onclick="iniciarJogo()"
+          class="w-full py-5 bg-blue-700 text-white text-3xl font-bold rounded-3xl shadow hover:bg-blue-800 active:bg-blue-900 transition duration-300"
+          aria-label="Iniciar Novo Jogo"
+        >
+          🎮 Iniciar Novo Jogo
+        </button>
+        <button
+          onclick="mostrarRegras()"
+          class="w-full py-5 bg-gray-300 text-gray-900 text-3xl font-bold rounded-3xl shadow hover:bg-gray-400 active:bg-gray-500 transition duration-300"
+          aria-label="Mostrar Regras"
+        >
+          📜 Regras
+        </button>
+      </section>
+    </main>
   </body>
 </html>

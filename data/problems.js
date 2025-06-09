@@ -201,7 +201,7 @@ const companies = [
     image: "assets/buildings/restaurante.png",
     problems: [
       {
-        image: "assets/problems/teste.png",
+        image: "assets/problems/restaurante1.png",
         description: "Menu digital sem fotos dos pratos",
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
@@ -213,7 +213,7 @@ const companies = [
         ],
       },
       {
-        image: "assets/problems/teste.png",
+        image: "assets/problems/restaurante2.png",
         description: "Não há indicação clara de como fazer pedidos pelo site",
         heuristic: "Reconhecimento em vez de memorização",
         explanation:
@@ -225,16 +225,15 @@ const companies = [
         ],
       },
       {
-        image: "assets/problems/teste.png",
-        description:
-          "Opções de dieta (vegetariano, vegano) escondidas em menus",
+        image: "assets/problems/restaurante3.png",
+        description: "Tela de pagamento não oferece opção de salvar o cartão",
         heuristic: "Flexibilidade e eficiência de uso",
         explanation:
-          "Aceleradores - não vistos pelo usuário novato - podem frequentemente acelerar a interação para o usuário experiente. Opções comuns devem ser facilmente acessíveis.",
+          "Usuários frequentes se beneficiam de opções que aceleram tarefas repetitivas, como salvar métodos de pagamento para reutilização futura. A ausência dessa opção obriga o preenchimento manual sempre.",
         options: [
           "Flexibilidade e eficiência de uso",
-          "Estética e design minimalista",
-          "Reconhecimento em vez de memorização",
+          "Consistência e padrões",
+          "Prevenção de erros",
         ],
       },
     ],

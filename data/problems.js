@@ -214,16 +214,17 @@ const companies = [
       },
       {
         image: "assets/problems/restaurante2.png",
-        description: "Não há indicação clara de como fazer pedidos pelo site",
-        heuristic: "Reconhecimento em vez de memorização",
+        description: "Não há botão claro para fazer pedidos na página de menu",
+        heuristic: "Consistência e padrões",
         explanation:
-          "Minimize a carga de memória do usuário tornando objetos, ações e opções visíveis. O fluxo deve ser óbvio e intuitivo.",
+          "A ausência de um botão visível para realizar pedidos quebra a consistência com padrões comuns de sites de delivery, tornando difícil para o usuário entender como prosseguir. Interfaces consistentes ajudam o usuário a prever ações e navegar com facilidade.",
         options: [
+          "Consistência e padrões",
           "Reconhecimento em vez de memorização",
           "Visibilidade do status do sistema",
-          "Ajuda e documentação",
         ],
       },
+
       {
         image: "assets/problems/restaurante3.png",
         description: "Tela de pagamento não oferece opção de salvar o cartão",
@@ -244,31 +245,34 @@ const companies = [
     image: "assets/buildings/aeroporto.png",
     problems: [
       {
-        image: "assets/problems/teste.png",
-        description: "Check-in online não mostra o próximo passo claramente",
-        heuristic: "Visibilidade do status do sistema",
+        image: "assets/problems/aeroporto1.png",
+        description:
+          "Mensagem de erro genérica sem indicação de como corrigir o problema",
+        heuristic:
+          "Ajuda os usuários a reconhecer, diagnosticar e recuperar-se de erros",
         explanation:
-          "O sistema deve sempre manter os usuários informados sobre o que está acontecendo, através de feedback adequado e em tempo razoável.",
+          "Mensagens de erro devem ser claras e orientar o usuário sobre como resolver o problema para avançar sem frustrações.",
         options: [
-          "Visibilidade do status do sistema",
-          "Consistência e padrões",
-          "Ajuda e documentação",
-        ],
-      },
-      {
-        image: "assets/problems/teste.png",
-        description: 'Mensagens de erro sem solução ("Dados inválidos")',
-        heuristic: "Ajuda e documentação",
-        explanation:
-          "Mesmo que seja melhor que o sistema possa ser usado sem documentação, pode ser necessário fornecer ajuda e documentação. Qualquer informação deve ser fácil de procurar, focada na tarefa do usuário e listar passos concretos a serem seguidos.",
-        options: [
+          "Ajuda os usuários a reconhecer, diagnosticar e recuperar-se de erros",
           "Ajuda e documentação",
           "Prevenção de erros",
-          "Compatibilidade entre o sistema e o mundo real",
         ],
       },
       {
-        image: "assets/problems/teste.png",
+        image: "assets/problems/aeroporto2.png",
+        description:
+          "Sistema permite que o usuário insira informações incompatíveis, como data de retorno anterior à data de ida",
+        heuristic: "Prevenção de erros",
+        explanation:
+          "O sistema deve prevenir a ocorrência de erros, bloqueando entradas inválidas e oferecendo feedback claro para evitar problemas futuros.",
+        options: [
+          "Prevenção de erros",
+          "Ajuda os usuários a reconhecer, diagnosticar e recuperar-se de erros",
+          "Consistência e padrões",
+        ],
+      },
+      {
+        image: "assets/problems/aeroporto3.png",
         description: "Processo de check-in com muitas etapas irreversíveis",
         heuristic: "Controle e liberdade do usuário",
         explanation:
